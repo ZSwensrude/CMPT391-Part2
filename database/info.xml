@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<University_upload_2023-02-14>
+  <Instructors>
+    <Instructor>
+      <InstructorID>1</InstructorID>
+      <InstructorName>John Smith</InstructorName>
+      <Faculty>Engineering</Faculty>
+      <Rank>Associate Professor</Rank>
+      <University>University of Alberta</University>
+    </Instructor>
+    <Instructor>
+      <InstructorID>2</InstructorID>
+      <InstructorName>Jane Doe</InstructorName>
+      <Faculty>Science</Faculty>
+      <Rank>Professor</Rank>
+      <University>University of Calgary</University>
+    </Instructor>
+  </Instructors>
+  <Students>
+    <Student>
+      <StudentID>1</StudentID>
+      <StudentName>Bob Smith</StudentName>
+      <Major>Computer Science</Major>
+      <Gender>Male</Gender>
+    </Student>
+    <Student>
+      <StudentID>2</StudentID>
+      <StudentName>Alice Johnson</StudentName>
+      <Major>Physics</Major>
+      <Gender>Female</Gender>
+    </Student>
+  </Students>
+  <Courses>
+    <Course>
+      <CourseID>1</CourseID>
+      <Department>Computer Science</Department>
+      <Faculty>Engineering</Faculty>
+      <University>University of Alberta</University>
+    </Course>
+    <Course>
+      <CourseID>2</CourseID>
+      <Department>Physics</Department>
+      <Faculty>Science</Faculty>
+      <University>University of Calgary</University>
+    </Course>
+  </Courses>
+  <Dates>
+    <Date>
+      <DateID>1</DateID>
+      <Semester>Fall</Semester>
+      <Year>2022</Year>
+    </Date>
+    <Date>
+      <DateID>2</DateID>
+      <Semester>Spring</Semester>
+      <Year>2023</Year>
+    </Date>
+  </Dates>
+  <FactCourses>
+    <Course>
+      <CourseID>1</CourseID>
+      <InstructorID>1</InstructorID>
+      <StudentID>1</StudentID>
+      <DateID>1</DateID>
+      <TotalCourses>3</TotalCourses>
+    </Course>
+    <Course>
+      <CourseID>2</CourseID>
+      <InstructorID>2</InstructorID>
+      <StudentID>2</StudentID>
+      <DateID>2</DateID>
+      <TotalCourses>5</TotalCourses>
+    </Course>
+  </FactCourses>
+</University_upload_2023-02-14>
