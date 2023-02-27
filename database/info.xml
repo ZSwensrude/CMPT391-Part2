@@ -15,6 +15,48 @@
       <Rank>Professor</Rank>
       <University>University of Calgary</University>
     </Instructor>
+    <Instructor>
+      <InstructorID>3</InstructorID>
+      <InstructorName>Michael Johnson</InstructorName>
+      <Faculty>Mathematics</Faculty>
+      <Rank>Associate Professor</Rank>
+      <University>University of Alberta</University>
+    </Instructor>
+    <Instructor>
+      <InstructorID>4</InstructorID>
+      <InstructorName>Sarah Lee</InstructorName>
+      <Faculty>Computer Science</Faculty>
+      <Rank>Professor</Rank>
+      <University>University of Calgary</University>
+    </Instructor>
+    <Instructor>
+      <InstructorID>5</InstructorID>
+      <InstructorName>Tom Brown</InstructorName>
+      <Faculty>Science</Faculty>
+      <Rank>Assistant Professor</Rank>
+      <University>University of Alberta</University>
+    </Instructor>
+    <Instructor>
+      <InstructorID>6</InstructorID>
+      <InstructorName>Amy Chen</InstructorName>
+      <Faculty>Mathematics</Faculty>
+      <Rank>Professor</Rank>
+      <University>University of Calgary</University>
+    </Instructor>
+    <Instructor>
+      <InstructorID>7</InstructorID>
+      <InstructorName>James Wilson</InstructorName>
+      <Faculty>Engineering</Faculty>
+      <Rank>Associate Professor</Rank>
+      <University>MacEwan University</University>
+    </Instructor>
+    <Instructor>
+      <InstructorID>8</InstructorID>
+      <InstructorName>Mary Taylor</InstructorName>
+      <Faculty>Physics</Faculty>
+      <Rank>Professor</Rank>
+      <University>MacEwan University</University>
+    </Instructor>
   </Instructors>
   <Students>
     <Student>
@@ -27,6 +69,54 @@
       <StudentID>2</StudentID>
       <StudentName>Alice Johnson</StudentName>
       <Major>Physics</Major>
+      <Gender>Female</Gender>
+    </Student>
+    <Student>
+      <StudentID>3</StudentID>
+      <StudentName>John Doe</StudentName>
+      <Major>Mathematics</Major>
+      <Gender>Male</Gender>
+    </Student>
+    <Student>
+      <StudentID>4</StudentID>
+      <StudentName>Jane Smith</StudentName>
+      <Major>Engineering</Major>
+      <Gender>Female</Gender>
+    </Student>
+    <Student>
+      <StudentID>5</StudentID>
+      <StudentName>David Brown</StudentName>
+      <Major>Computer Science</Major>
+      <Gender>Male</Gender>
+    </Student>
+    <Student>
+      <StudentID>6</StudentID>
+      <StudentName>Sophie Liu</StudentName>
+      <Major>Biology</Major>
+      <Gender>Female</Gender>
+    </Student>
+    <Student>
+      <StudentID>7</StudentID>
+      <StudentName>Mark Johnson</StudentName>
+      <Major>Mathematics</Major>
+      <Gender>Male</Gender>
+    </Student>
+    <Student>
+      <StudentID>8</StudentID>
+      <StudentName>Emily Lee</StudentName>
+      <Major>Engineering</Major>
+      <Gender>Female</Gender>
+    </Student>
+    <Student>
+      <StudentID>9</StudentID>
+      <StudentName>George Wang</StudentName>
+      <Major>Computer Science</Major>
+      <Gender>Male</Gender>
+    </Student>
+    <Student>
+      <StudentID>10</StudentID>
+      <StudentName>Samantha Smith</StudentName>
+      <Major>Psychology</Major>
       <Gender>Female</Gender>
     </Student>
   </Students>
@@ -42,6 +132,54 @@
       <Department>Physics</Department>
       <Faculty>Science</Faculty>
       <University>University of Calgary</University>
+    </Course>
+    <Course>
+      <CourseID>3</CourseID>
+      <Department>Mathematics</Department>
+      <Faculty>Science</Faculty>
+      <University>University of Alberta</University>
+    </Course>
+    <Course>
+      <CourseID>4</CourseID>
+      <Department>Chemistry</Department>
+      <Faculty>Science</Faculty>
+      <University>MacEwan University</University>
+    </Course>
+    <Course>
+      <CourseID>5</CourseID>
+      <Department>Biology</Department>
+      <Faculty>Science</Faculty>
+      <University>University of Calgary</University>
+    </Course>
+    <Course>
+      <CourseID>6</CourseID>
+      <Department>Engineering</Department>
+      <Faculty>Engineering</Faculty>
+      <University>University of Alberta</University>
+    </Course>
+    <Course>
+      <CourseID>7</CourseID>
+      <Department>Psychology</Department>
+      <Faculty>Social Science</Faculty>
+      <University>University of Alberta</University>
+    </Course>
+    <Course>
+      <CourseID>8</CourseID>
+      <Department>Mathematics</Department>
+      <Faculty>Science</Faculty>
+      <University>University of Calgary</University>
+    </Course>
+    <Course>
+      <CourseID>9</CourseID>
+      <Department>Computer Science</Department>
+      <Faculty>Engineering</Faculty>
+      <University>University of Calgary</University>
+    </Course>
+    <Course>
+      <CourseID>10</CourseID>
+      <Department>Engineering</Department>
+      <Faculty>Engineering</Faculty>
+      <University>MacEwan University</University>
     </Course>
   </Courses>
   <Dates>
