@@ -7,14 +7,6 @@ Rank VARCHAR(50),
 University VARCHAR(50)
 );
 
--- Create Students Dimension Table
-CREATE TABLE Students (
-StudentID INT PRIMARY KEY,
-StudentName VARCHAR(50),
-Major VARCHAR(50),
-Gender VARCHAR(10)
-);
-
 -- Create Courses Dimension Table
 CREATE TABLE Courses (
 CourseID INT PRIMARY KEY,
@@ -39,7 +31,6 @@ DateID INT,
 TotalCourses INT,
 FOREIGN KEY (CourseID) REFERENCES Courses (CourseID),
 FOREIGN KEY (InstructorID) REFERENCES Instructors (InstructorID),
-FOREIGN KEY (StudentID) REFERENCES Students (StudentID),
 FOREIGN KEY (DateID) REFERENCES Dates (DateID)
 );
 
@@ -49,5 +40,4 @@ CREATE CLUSTERED INDEX cx_FactCourses ON FactCourses (DateID, InstructorID, Stud
 Select * from Courses
 Select * from Instructors
 Select * from Dates
-Select * from Students
 Select * from FactCourses
