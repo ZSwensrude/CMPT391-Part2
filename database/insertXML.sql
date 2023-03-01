@@ -259,8 +259,9 @@ SELECT
     FactCourse.value('TotalCourses[1]', 'int') AS TotalCourses
 FROM @UniversityXML.nodes('/University_upload_2023-02-14/FactCourses/Course') AS T(FactCourse)
 
-TRUNCATE TABLE Courses
+
+/*TRUNCATE TABLE Courses
 TRUNCATE TABLE Dates
 TRUNCATE TABLE FactCourses
 TRUNCATE TABLE Instuctors
-TRUNCATE TABLE Students
+TRUNCATE TABLE Students*/
