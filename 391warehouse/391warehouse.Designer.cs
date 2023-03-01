@@ -74,7 +74,6 @@
             this.label1.Size = new System.Drawing.Size(181, 212);
             this.label1.TabIndex = 1;
             this.label1.Text = "0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -305,7 +304,7 @@
             this.submit_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(116)))), ((int)(((byte)(179)))));
             this.submit_btn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.submit_btn.Location = new System.Drawing.Point(368, 598);
+            this.submit_btn.Location = new System.Drawing.Point(217, 592);
             this.submit_btn.Name = "submit_btn";
             this.submit_btn.Size = new System.Drawing.Size(136, 49);
             this.submit_btn.TabIndex = 25;
