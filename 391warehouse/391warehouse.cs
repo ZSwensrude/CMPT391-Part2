@@ -51,7 +51,6 @@ namespace _391warehouse
                 MessageBox.Show(e.ToString(), "Error");
                 this.Close();
             }
-
         }
 
         private void Warehouse_Load(object sender, EventArgs e)
