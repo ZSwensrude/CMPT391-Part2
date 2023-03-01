@@ -194,20 +194,4 @@
       <Year>2023</Year>
     </Date>
   </Dates>
-  <FactCourses>
-    <Course>
-      <CourseID>1</CourseID>
-      <InstructorID>1</InstructorID>
-      <StudentID>1</StudentID>
-      <DateID>1</DateID>
-      <TotalCourses>3</TotalCourses>
-    </Course>
-    <Course>
-      <CourseID>2</CourseID>
-      <InstructorID>2</InstructorID>
-      <StudentID>2</StudentID>
-      <DateID>2</DateID>
-      <TotalCourses>5</TotalCourses>
-    </Course>
-  </FactCourses>
 </University_upload_2023-02-14>

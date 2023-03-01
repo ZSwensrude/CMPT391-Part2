@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(423, 151);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(275, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // Warehouse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(38)))), ((int)(((byte)(71)))));
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Warehouse";
             this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.Warehouse_Load);
@@ -43,6 +55,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

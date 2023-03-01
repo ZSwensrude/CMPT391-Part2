@@ -58,68 +58,6 @@ DECLARE @UniversityXML XML = '
       <University>MacEwan University</University>
     </Instructor>
   </Instructors>
-  <Students>
-    <Student>
-      <StudentID>1</StudentID>
-      <StudentName>Bob Smith</StudentName>
-      <Major>Computer Science</Major>
-      <Gender>Male</Gender>
-    </Student>
-    <Student>
-      <StudentID>2</StudentID>
-      <StudentName>Alice Johnson</StudentName>
-      <Major>Physics</Major>
-      <Gender>Female</Gender>
-    </Student>
-    <Student>
-      <StudentID>3</StudentID>
-      <StudentName>John Doe</StudentName>
-      <Major>Mathematics</Major>
-      <Gender>Male</Gender>
-    </Student>
-    <Student>
-      <StudentID>4</StudentID>
-      <StudentName>Jane Smith</StudentName>
-      <Major>Engineering</Major>
-      <Gender>Female</Gender>
-    </Student>
-    <Student>
-      <StudentID>5</StudentID>
-      <StudentName>David Brown</StudentName>
-      <Major>Computer Science</Major>
-      <Gender>Male</Gender>
-    </Student>
-    <Student>
-      <StudentID>6</StudentID>
-      <StudentName>Sophie Liu</StudentName>
-      <Major>Biology</Major>
-      <Gender>Female</Gender>
-    </Student>
-    <Student>
-      <StudentID>7</StudentID>
-      <StudentName>Mark Johnson</StudentName>
-      <Major>Mathematics</Major>
-      <Gender>Male</Gender>
-    </Student>
-    <Student>
-      <StudentID>8</StudentID>
-      <StudentName>Emily Lee</StudentName>
-      <Major>Engineering</Major>
-      <Gender>Female</Gender>
-    </Student>
-    <Student>
-      <StudentID>9</StudentID>
-      <StudentName>George Wang</StudentName>
-      <Major>Computer Science</Major>
-      <Gender>Male</Gender>
-    </Student>
-    <Student>
-      <StudentID>10</StudentID>
-      <StudentName>Samantha Smith</StudentName>
-      <Major>Psychology</Major>
-      <Gender>Female</Gender>
-    </Student>
-  </Students>
   <Courses>
     <Course>
       <CourseID>1</CourseID>
@@ -194,22 +132,6 @@ DECLARE @UniversityXML XML = '
       <Year>2023</Year>
     </Date>
   </Dates>
-  <FactCourses>
-    <Course>
-      <CourseID>1</CourseID>
-      <InstructorID>1</InstructorID>
-      <StudentID>1</StudentID>
-      <DateID>1</DateID>
-      <TotalCourses>3</TotalCourses>
-    </Course>
-    <Course>
-      <CourseID>2</CourseID>
-      <InstructorID>2</InstructorID>
-      <StudentID>2</StudentID>
-      <DateID>2</DateID>
-      <TotalCourses>5</TotalCourses>
-    </Course>
-  </FactCourses>
 </University_upload_2023-02-14>
 '
 
@@ -222,15 +144,6 @@ SELECT
     Instructor.value('Rank[1]', 'varchar(50)') AS Rank,
     Instructor.value('University[1]', 'varchar(50)') AS University
 FROM @UniversityXML.nodes('/University_upload_2023-02-14/Instructors/Instructor') AS T(Instructor)
-
--- Insert data into Students table
-INSERT INTO Students (StudentID, StudentName, Major, Gender)
-SELECT
-    Student.value('StudentID[1]', 'int') AS StudentID,
-    Student.value('StudentName[1]', 'varchar(50)') AS StudentName,
-    Student.value('Major[1]', 'varchar(50)') AS Major,
-    Student.value('Gender[1]', 'varchar(50)') AS Gender
-FROM @UniversityXML.nodes('/University_upload_2023-02-14/Students/Student') AS T(Student)
 
 -- Insert data into Courses table
 INSERT INTO Courses (CourseID, Department, Faculty, University)
@@ -250,18 +163,17 @@ SELECT
 FROM @UniversityXML.nodes('/University_upload_2023-02-14/Dates/Date') AS T(Date)
 
 -- Insert data into FactCourses table
-INSERT INTO FactCourses (CourseID, InstructorID, StudentID, DateID, TotalCourses)
+INSERT INTO FactCourses (CourseID, InstructorID, DateID, TotalCourses)
 SELECT
     FactCourse.value('CourseID[1]', 'int') AS CourseID,
     FactCourse.value('InstructorID[1]', 'int') AS InstructorID,
-    FactCourse.value('StudentID[1]', 'int') AS StudentID,
     FactCourse.value('DateID[1]', 'int') AS DateID,
     FactCourse.value('TotalCourses[1]', 'int') AS TotalCourses
 FROM @UniversityXML.nodes('/University_upload_2023-02-14/FactCourses/Course') AS T(FactCourse)
 
-
-/*TRUNCATE TABLE Courses
+/*
+TRUNCATE TABLE Courses
 TRUNCATE TABLE Dates
-TRUNCATE TABLE FactCourses
 TRUNCATE TABLE Instuctors
-TRUNCATE TABLE Students*/
+TRUNCATE TABLE FactCourses
+*/
