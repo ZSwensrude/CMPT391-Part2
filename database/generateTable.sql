@@ -27,7 +27,7 @@ CREATE TABLE FactCourses (
 CourseID INT,
 InstructorID INT,
 DateID INT,
-TotalCourses INT,
+NoOfCourse INT,
 FOREIGN KEY (CourseID) REFERENCES Courses (CourseID),
 FOREIGN KEY (InstructorID) REFERENCES Instructors (InstructorID),
 FOREIGN KEY (DateID) REFERENCES Dates (DateID)
