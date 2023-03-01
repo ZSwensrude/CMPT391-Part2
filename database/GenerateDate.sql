@@ -1,5 +1,5 @@
 Create table Date (
-DateID int primary key , 
+DID int primary key , 
 year int,
 semester varchar(30));
 

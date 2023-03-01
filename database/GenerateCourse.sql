@@ -1,5 +1,5 @@
 CREATE TABLE Course (
-CourseID int primary key,
+CID int primary key,
 title varchar(10),
 credits int,
 Dept_Name varchar(30));
@@ -34,5 +34,3 @@ begin
 	select @courseIndex = @courseIndex + 5
 	select @courseID = @courseID + 1
 end
-
-

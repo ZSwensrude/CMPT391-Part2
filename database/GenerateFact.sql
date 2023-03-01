@@ -2,7 +2,10 @@ create table Fact (
 	IID INT,
 	CID INT,
 	DID INT,
-	no_of_course INT
+	no_of_course INT,
+	FOREIGN KEY (IID) REFERENCES Instructor (IID),
+	FOREIGN KEY (CID) REFERENCES Course (CID),
+	FOREIGN KEY (DID) REFERENCES Date (DID),
 );
 
 insert into Fact (IID, CID, DID, no_of_course) values (48, 49, 55, 1);

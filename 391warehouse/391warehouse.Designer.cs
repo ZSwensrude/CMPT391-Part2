@@ -28,63 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.yearStart = new System.Windows.Forms.ComboBox();
+            this.num_display = new System.Windows.Forms.Label();
+            this.total_label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.yearEnd = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.termCombo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.courseTitle = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.courseDept = new System.Windows.Forms.ComboBox();
+            this.courseCredits = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.instructorName = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.instructorDept = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.instructorTitle = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.instructorGender = new System.Windows.Forms.ComboBox();
             this.submit_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // yearStart
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(344, 156);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(94, 21);
-            this.comboBox1.TabIndex = 0;
+            this.yearStart.FormattingEnabled = true;
+            this.yearStart.Location = new System.Drawing.Point(344, 156);
+            this.yearStart.Name = "yearStart";
+            this.yearStart.Size = new System.Drawing.Size(94, 21);
+            this.yearStart.TabIndex = 0;
             // 
-            // label1
+            // num_display
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(796, 260);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 212);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "0";
+            this.num_display.AutoSize = true;
+            this.num_display.Font = new System.Drawing.Font("Segoe UI", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_display.ForeColor = System.Drawing.Color.White;
+            this.num_display.Location = new System.Drawing.Point(725, 267);
+            this.num_display.Name = "num_display";
+            this.num_display.Size = new System.Drawing.Size(457, 212);
+            this.num_display.TabIndex = 1;
+            this.num_display.Text = "0000";
+            this.num_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // total_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(784, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 30);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Number of Courses";
+            this.total_label.AutoSize = true;
+            this.total_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_label.ForeColor = System.Drawing.Color.White;
+            this.total_label.Location = new System.Drawing.Point(851, 237);
+            this.total_label.Name = "total_label";
+            this.total_label.Size = new System.Drawing.Size(193, 30);
+            this.total_label.TabIndex = 2;
+            this.total_label.Text = "Number of Courses";
             // 
             // label3
             // 
@@ -141,13 +142,13 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "to";
             // 
-            // comboBox2
+            // yearEnd
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(508, 156);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(94, 21);
-            this.comboBox2.TabIndex = 8;
+            this.yearEnd.FormattingEnabled = true;
+            this.yearEnd.Location = new System.Drawing.Point(508, 156);
+            this.yearEnd.Name = "yearEnd";
+            this.yearEnd.Size = new System.Drawing.Size(94, 21);
+            this.yearEnd.TabIndex = 8;
             // 
             // label8
             // 
@@ -160,13 +161,13 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Term:";
             // 
-            // comboBox3
+            // termCombo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(344, 193);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(94, 21);
-            this.comboBox3.TabIndex = 10;
+            this.termCombo.FormattingEnabled = true;
+            this.termCombo.Location = new System.Drawing.Point(344, 193);
+            this.termCombo.Name = "termCombo";
+            this.termCombo.Size = new System.Drawing.Size(94, 21);
+            this.termCombo.TabIndex = 10;
             // 
             // label9
             // 
@@ -179,12 +180,12 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "Title:";
             // 
-            // textBox1
+            // courseTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(281, 283);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 12;
+            this.courseTitle.Location = new System.Drawing.Point(281, 283);
+            this.courseTitle.Name = "courseTitle";
+            this.courseTitle.Size = new System.Drawing.Size(187, 20);
+            this.courseTitle.TabIndex = 12;
             // 
             // label10
             // 
@@ -197,21 +198,21 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Dept:";
             // 
-            // comboBox4
+            // courseDept
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(281, 319);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(187, 21);
-            this.comboBox4.TabIndex = 14;
+            this.courseDept.FormattingEnabled = true;
+            this.courseDept.Location = new System.Drawing.Point(281, 319);
+            this.courseDept.Name = "courseDept";
+            this.courseDept.Size = new System.Drawing.Size(187, 21);
+            this.courseDept.TabIndex = 14;
             // 
-            // comboBox5
+            // courseCredits
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(415, 355);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(53, 21);
-            this.comboBox5.TabIndex = 15;
+            this.courseCredits.FormattingEnabled = true;
+            this.courseCredits.Location = new System.Drawing.Point(415, 355);
+            this.courseCredits.Name = "courseCredits";
+            this.courseCredits.Size = new System.Drawing.Size(53, 21);
+            this.courseCredits.TabIndex = 15;
             // 
             // label11
             // 
@@ -224,12 +225,12 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "No. of Credits:";
             // 
-            // textBox2
+            // instructorName
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 459);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 20);
-            this.textBox2.TabIndex = 17;
+            this.instructorName.Location = new System.Drawing.Point(291, 459);
+            this.instructorName.Name = "instructorName";
+            this.instructorName.Size = new System.Drawing.Size(187, 20);
+            this.instructorName.TabIndex = 17;
             // 
             // label12
             // 
@@ -253,13 +254,13 @@
             this.label13.TabIndex = 19;
             this.label13.Text = "Title:";
             // 
-            // comboBox6
+            // instructorDept
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(291, 511);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(187, 21);
-            this.comboBox6.TabIndex = 21;
+            this.instructorDept.FormattingEnabled = true;
+            this.instructorDept.Location = new System.Drawing.Point(291, 511);
+            this.instructorDept.Name = "instructorDept";
+            this.instructorDept.Size = new System.Drawing.Size(187, 21);
+            this.instructorDept.TabIndex = 21;
             // 
             // label14
             // 
@@ -272,12 +273,12 @@
             this.label14.TabIndex = 20;
             this.label14.Text = "Dept:";
             // 
-            // textBox3
+            // instructorTitle
             // 
-            this.textBox3.Location = new System.Drawing.Point(291, 485);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 20);
-            this.textBox3.TabIndex = 22;
+            this.instructorTitle.Location = new System.Drawing.Point(291, 485);
+            this.instructorTitle.Name = "instructorTitle";
+            this.instructorTitle.Size = new System.Drawing.Size(187, 20);
+            this.instructorTitle.TabIndex = 22;
             // 
             // label15
             // 
@@ -290,13 +291,13 @@
             this.label15.TabIndex = 23;
             this.label15.Text = "Gender:";
             // 
-            // comboBox7
+            // instructorGender
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(291, 539);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(187, 21);
-            this.comboBox7.TabIndex = 24;
+            this.instructorGender.FormattingEnabled = true;
+            this.instructorGender.Location = new System.Drawing.Point(291, 539);
+            this.instructorGender.Name = "instructorGender";
+            this.instructorGender.Size = new System.Drawing.Size(187, 21);
+            this.instructorGender.TabIndex = 24;
             // 
             // submit_btn
             // 
@@ -318,31 +319,31 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(38)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.submit_btn);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.instructorGender);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.instructorTitle);
+            this.Controls.Add(this.instructorDept);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.instructorName);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.courseCredits);
+            this.Controls.Add(this.courseDept);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.courseTitle);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.termCombo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.yearEnd);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.total_label);
+            this.Controls.Add(this.num_display);
+            this.Controls.Add(this.yearStart);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Warehouse";
             this.Text = "Warehouse";
@@ -354,31 +355,31 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox yearStart;
+        private System.Windows.Forms.Label num_display;
+        private System.Windows.Forms.Label total_label;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox yearEnd;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox termCombo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox courseTitle;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox courseDept;
+        private System.Windows.Forms.ComboBox courseCredits;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox instructorName;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox instructorDept;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox instructorTitle;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox instructorGender;
         private System.Windows.Forms.Button submit_btn;
     }
 }
