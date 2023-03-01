@@ -56,7 +56,23 @@ namespace _391warehouse
 
         private void Warehouse_Load(object sender, EventArgs e)
         {
+            myCommand.CommandType = CommandType.Text;
+            myCommand.CommandText = "SELECT SUM(no_of_course) as total_courses FROM Fact;";
 
+            try
+            {
+                myReader = myCommand.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    num_display.Text = myReader["total_courses"].ToString();
+                }
+                myReader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
         }
     }
 }

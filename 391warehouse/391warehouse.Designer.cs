@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.num_display = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,16 +64,16 @@
             this.comboBox1.Size = new System.Drawing.Size(94, 21);
             this.comboBox1.TabIndex = 0;
             // 
-            // label1
+            // num_display
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(796, 260);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 212);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "0";
+            this.num_display.AutoSize = true;
+            this.num_display.Font = new System.Drawing.Font("Segoe UI", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_display.ForeColor = System.Drawing.Color.White;
+            this.num_display.Location = new System.Drawing.Point(796, 260);
+            this.num_display.Name = "num_display";
+            this.num_display.Size = new System.Drawing.Size(181, 212);
+            this.num_display.TabIndex = 1;
+            this.num_display.Text = "0";
             // 
             // label2
             // 
@@ -341,7 +341,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.num_display);
             this.Controls.Add(this.comboBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Warehouse";
@@ -355,7 +355,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label num_display;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
