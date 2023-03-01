@@ -2,52 +2,41 @@
 CREATE TABLE Instructors (
 InstructorID INT PRIMARY KEY,
 InstructorName VARCHAR(50),
-Faculty VARCHAR(50),
-Rank VARCHAR(50),
-University VARCHAR(50)
-);
-
--- Create Students Dimension Table
-CREATE TABLE Students (
-StudentID INT PRIMARY KEY,
-StudentName VARCHAR(50),
-Major VARCHAR(50),
-Gender VARCHAR(10)
+Title VARCHAR(50),
+Department VARCHAR(50),
+Gender VARCHAR(50), 
 );
 
 -- Create Courses Dimension Table
 CREATE TABLE Courses (
 CourseID INT PRIMARY KEY,
+Title VARCHAR(50), 
 Department VARCHAR(50),
-Faculty VARCHAR(50),
-University VARCHAR(50)
+NoOfCredits INT,
 );
 
 -- Create Date Dimension Table
 CREATE TABLE Dates (
 DateID INT PRIMARY KEY,
-Semester VARCHAR(10),
-Year INT
+Year INT, 
+Term VARCHAR(10),
 );
 
 -- Create Fact Table
 CREATE TABLE FactCourses (
 CourseID INT,
 InstructorID INT,
-StudentID INT,
 DateID INT,
-TotalCourses INT,
+NoOfCourse INT,
 FOREIGN KEY (CourseID) REFERENCES Courses (CourseID),
 FOREIGN KEY (InstructorID) REFERENCES Instructors (InstructorID),
-FOREIGN KEY (StudentID) REFERENCES Students (StudentID),
 FOREIGN KEY (DateID) REFERENCES Dates (DateID)
 );
 
 -- Create clustered index on Fact table for better performance
-CREATE CLUSTERED INDEX cx_FactCourses ON FactCourses (DateID, InstructorID, StudentID, CourseID);
+CREATE CLUSTERED INDEX cx_FactCourses ON FactCourses (DateID, InstructorID, CourseID);
 
 Select * from Courses
 Select * from Instructors
 Select * from Dates
-Select * from Students
 Select * from FactCourses
