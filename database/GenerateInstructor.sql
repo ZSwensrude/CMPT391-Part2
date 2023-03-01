@@ -1,5 +1,5 @@
 create table Instructor (
-	IID INT,
+	IID INT primary key,
 	name VARCHAR(30),
 	title VARCHAR(20),
 	dept VARCHAR(20),
