@@ -54,6 +54,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.instructorGender = new System.Windows.Forms.ComboBox();
             this.submit_btn = new System.Windows.Forms.Button();
+            this.import_btn = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // yearStart
@@ -312,12 +314,29 @@
             this.submit_btn.Text = "Lookup";
             this.submit_btn.UseVisualStyleBackColor = false;
             // 
+            // import_btn
+            // 
+            this.import_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.import_btn.ForeColor = System.Drawing.Color.White;
+            this.import_btn.Image = global::_391warehouse.Properties.Resources.upload;
+            this.import_btn.Location = new System.Drawing.Point(1202, 12);
+            this.import_btn.Name = "import_btn";
+            this.import_btn.Size = new System.Drawing.Size(50, 47);
+            this.import_btn.TabIndex = 26;
+            this.import_btn.UseVisualStyleBackColor = true;
+            this.import_btn.Click += new System.EventHandler(this.import_btn_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
             // Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(38)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.import_btn);
             this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.instructorGender);
             this.Controls.Add(this.label15);
@@ -381,6 +400,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox instructorGender;
         private System.Windows.Forms.Button submit_btn;
+        private System.Windows.Forms.Button import_btn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
