@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<University_upload_2023-03-15>
+    <Instructor>
+        <IID>77</IID>
+        <Name>Jane Doe</Name>
+        <Title>Clown</Title>
+        <Dept>Fake</Dept>
+        <Gender>Female</Gender>
+    </Instructor>
+    <Date>
+        <DID>101</DID>
+        <Year>2023</Year>
+        <Semester>Winter</Semester>
+    </Date>
+    <Course>
+        <CID>245</CID>
+        <Title>RAND100</Title>
+        <Credits>0</Credits>
+        <Dept_Name>Fake</Dept_Name>
+    </Course>
+    <Fact>
+        <IID>1</IID>
+        <CID>1</CID>
+        <DID>1</DID>
+        <no_of_course>1</no_of_course>
+    </Fact>
+</University_upload_2023-03-15>
