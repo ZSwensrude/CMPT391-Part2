@@ -26,7 +26,7 @@ namespace _391warehouse
         {
             InitializeComponent();
             ///////////////////////////////
-            String connectionString = "Server = DESKTOP-JSPRNKM; Database = 391warehouse; Trusted_Connection = yes;";
+            String connectionString = "Server = LAPTOP-HUT8634L; Database = 391warehouse; Trusted_Connection = yes;";
             // Need to change server to your personal SQL server before using (and Database if different)
             // Adam: DESKTOP-SO5MCT3
             // Zach: LAPTOP-HUT8634L
@@ -224,6 +224,118 @@ namespace _391warehouse
             {
                 MessageBox.Show("Error processing XML file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void submit_btn_Click(object sender, EventArgs e)
+        {
+
+            myCommand.CommandType = CommandType.Text;
+            myCommand.CommandText = "SELECT SUM(no_of_course) as total_courses FROM Fact F";
+
+            //use these flags to see if there is anything to search in those boxes
+            Boolean date_search = false;
+            Boolean course_search = false;
+            Boolean instructor_search = false;
+
+
+            //ADD DATE SEARCH HERE  "+= Date D"
+
+
+            //Course lookup
+            string course_title = courseTitle.Text;
+            string selected_dept = courseDept.GetItemText(courseDept.SelectedItem);
+            string selected_credits = courseCredits.GetItemText(courseCredits.SelectedItem);
+            
+            if (course_title.Length > 0 || selected_dept.Length > 0 || selected_credits.Length > 0)
+            {
+                myCommand.CommandText += ", Course C";
+                course_search= true;
+            }
+
+
+
+            //ADD INSTRUCTOR HERE "+= Instructor I"
+
+
+
+            //Now add to the search string
+            //add initial where statment if there is anything to search for
+            if (date_search || course_search || instructor_search)
+            {
+                myCommand.CommandText += " where";
+
+                if (date_search)
+                {
+                    myCommand.CommandText += " F.DID = D.DateID";
+                }
+                if (course_search)
+                {
+                    //check if there was already a join to see if we need to add an "and" to the query
+                    if (!date_search)
+                    {
+                        myCommand.CommandText += " F.CID = C.CourseID";
+                    }
+                    else
+                    {
+                        myCommand.CommandText += " and F.CID = C.CourseID";
+                    }
+                }
+                if (instructor_search)
+                {
+                    //check if there was already a join to see if we need to add an "and" to the query
+                    if (!date_search && !course_search)
+                    {
+                        myCommand.CommandText += " F.IID = I.IID";
+                    }
+                    else
+                    {
+                        myCommand.CommandText += " and F.IID = I.IID";
+                    }
+                }
+            }
+
+            //Now add the specific parameters if needed
+            //if (date_search)
+            //do thing
+
+            if (course_search)
+            {
+                if (course_title.Length > 0)
+                {
+                    myCommand.CommandText += " and C.title = '" + course_title + "'";
+                }
+                if (selected_dept.Length > 0)
+                {
+                    myCommand.CommandText += " and C.Dept_Name = '" + selected_dept + "'";
+                }
+                if (selected_credits.Length > 0)
+                {
+                    myCommand.CommandText += " and C.credits = " + selected_credits;
+                }
+            }
+
+            //if (instructor_search)
+            //do thing
+
+
+
+            MessageBox.Show(myCommand.CommandText);
+
+            try
+            {
+                myReader = myCommand.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    num_display.Text = myReader["total_courses"].ToString();
+                }
+                myReader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+
         }
     }
 }
