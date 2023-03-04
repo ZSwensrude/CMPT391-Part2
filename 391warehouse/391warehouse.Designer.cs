@@ -54,11 +54,47 @@
             this.label15 = new System.Windows.Forms.Label();
             this.instructorGender = new System.Windows.Forms.ComboBox();
             this.submit_btn = new System.Windows.Forms.Button();
+            this.import_btn = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // yearStart
             // 
             this.yearStart.FormattingEnabled = true;
+            this.yearStart.Items.AddRange(new object[] {
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
             this.yearStart.Location = new System.Drawing.Point(344, 156);
             this.yearStart.Name = "yearStart";
             this.yearStart.Size = new System.Drawing.Size(94, 21);
@@ -145,6 +181,40 @@
             // yearEnd
             // 
             this.yearEnd.FormattingEnabled = true;
+            this.yearEnd.Items.AddRange(new object[] {
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
             this.yearEnd.Location = new System.Drawing.Point(508, 156);
             this.yearEnd.Name = "yearEnd";
             this.yearEnd.Size = new System.Drawing.Size(94, 21);
@@ -164,6 +234,11 @@
             // termCombo
             // 
             this.termCombo.FormattingEnabled = true;
+            this.termCombo.Items.AddRange(new object[] {
+            "Fall",
+            "Winter",
+            "Spring/Summer",
+            "All"});
             this.termCombo.Location = new System.Drawing.Point(344, 193);
             this.termCombo.Name = "termCombo";
             this.termCombo.Size = new System.Drawing.Size(94, 21);
@@ -186,6 +261,7 @@
             this.courseTitle.Name = "courseTitle";
             this.courseTitle.Size = new System.Drawing.Size(187, 20);
             this.courseTitle.TabIndex = 12;
+            this.courseTitle.TextChanged += new System.EventHandler(this.courseTitle_TextChanged);
             // 
             // label10
             // 
@@ -201,6 +277,12 @@
             // courseDept
             // 
             this.courseDept.FormattingEnabled = true;
+            this.courseDept.Items.AddRange(new object[] {
+            "Business",
+            "Computer Science",
+            "Mathmatics",
+            "Psychology",
+            "Statistics"});
             this.courseDept.Location = new System.Drawing.Point(281, 319);
             this.courseDept.Name = "courseDept";
             this.courseDept.Size = new System.Drawing.Size(187, 21);
@@ -209,6 +291,10 @@
             // courseCredits
             // 
             this.courseCredits.FormattingEnabled = true;
+            this.courseCredits.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4"});
             this.courseCredits.Location = new System.Drawing.Point(415, 355);
             this.courseCredits.Name = "courseCredits";
             this.courseCredits.Size = new System.Drawing.Size(53, 21);
@@ -311,6 +397,23 @@
             this.submit_btn.TabIndex = 25;
             this.submit_btn.Text = "Lookup";
             this.submit_btn.UseVisualStyleBackColor = false;
+            this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
+            // 
+            // import_btn
+            // 
+            this.import_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.import_btn.ForeColor = System.Drawing.Color.White;
+            this.import_btn.Image = global::_391warehouse.Properties.Resources.upload;
+            this.import_btn.Location = new System.Drawing.Point(1202, 12);
+            this.import_btn.Name = "import_btn";
+            this.import_btn.Size = new System.Drawing.Size(50, 47);
+            this.import_btn.TabIndex = 26;
+            this.import_btn.UseVisualStyleBackColor = true;
+            this.import_btn.Click += new System.EventHandler(this.import_btn_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
             // 
             // Warehouse
             // 
@@ -318,6 +421,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(38)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.import_btn);
             this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.instructorGender);
             this.Controls.Add(this.label15);
@@ -344,7 +448,7 @@
             this.Controls.Add(this.total_label);
             this.Controls.Add(this.num_display);
             this.Controls.Add(this.yearStart);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Warehouse";
             this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.Warehouse_Load);
@@ -381,6 +485,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox instructorGender;
         private System.Windows.Forms.Button submit_btn;
+        private System.Windows.Forms.Button import_btn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
