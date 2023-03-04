@@ -26,7 +26,7 @@ namespace _391warehouse
         {
             InitializeComponent();
             ///////////////////////////////
-            String connectionString = "Server = LAPTOP-HUT8634L; Database = 391warehouse; Trusted_Connection = yes;";
+            String connectionString = "Server = DESKTOP-SO5MCT3; Database = 391warehouse; Trusted_Connection = yes;";
             // Need to change server to your personal SQL server before using (and Database if different)
             // Adam: DESKTOP-SO5MCT3
             // Zach: LAPTOP-HUT8634L
@@ -239,7 +239,16 @@ namespace _391warehouse
 
 
             //ADD DATE SEARCH HERE  "+= Date D"
+            string year_start = yearStart.GetItemText(yearStart.SelectedItem);
+            string year_end = yearEnd.GetItemText(yearEnd.SelectedItem);
+            string term = termCombo.GetItemText(termCombo.SelectedItem);
+            int invalid_flag = 0;
 
+            if (year_start.Length > 0 || year_end.Length > 0 || term.Length > 0)
+            {
+                myCommand.CommandText += ", Date D";
+                date_search = true;
+            }
 
             //Course lookup
             string course_title = courseTitle.Text;
@@ -266,18 +275,18 @@ namespace _391warehouse
 
                 if (date_search)
                 {
-                    myCommand.CommandText += " F.DID = D.DateID";
+                    myCommand.CommandText += " F.DID = D.DID";
                 }
                 if (course_search)
                 {
                     //check if there was already a join to see if we need to add an "and" to the query
                     if (!date_search)
                     {
-                        myCommand.CommandText += " F.CID = C.CourseID";
+                        myCommand.CommandText += " F.CID = C.CID";
                     }
                     else
                     {
-                        myCommand.CommandText += " and F.CID = C.CourseID";
+                        myCommand.CommandText += " and F.CID = C.CID";
                     }
                 }
                 if (instructor_search)
@@ -297,6 +306,67 @@ namespace _391warehouse
             //Now add the specific parameters if needed
             //if (date_search)
             //do thing
+            if (date_search)
+            {
+                // reset flag to 0 
+                invalid_flag = 0;
+
+                // if there is both a start and end date
+                if (year_start.Length > 0 && year_end.Length > 0)
+                {
+                    //  if the end date is less than the start date (ex. start = 2001, end = 1990) throw an error message and switch flag
+                    if (int.Parse(year_end) < int.Parse(year_start))
+                    {
+                        MessageBox.Show("End date lower than start date, please enter a valid selection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        invalid_flag = 1;
+                    }
+                    // otherwise find values between range
+                    else
+                    {
+                        // Check if a term other than "All" is specified
+                        if (term.Length > 0 && term != "All")
+                        {
+                            myCommand.CommandText += " and D.year >= " + int.Parse(year_start) + " and D.year <= " + int.Parse(year_end) + " and D.semester = '" + term + "'";
+                        }
+                        // otherwise find results for all terms
+                        else
+                        {
+                            myCommand.CommandText += " and D.year >= " + int.Parse(year_start) + " and D.year <= " + int.Parse(year_end);
+                        }
+
+                    }
+                }
+                // if there is only a start date
+                else if (year_start.Length > 0)
+                {
+
+                    // Check if a term other than "All" is specified
+                    if (term.Length > 0 && term != "All")
+                    {
+                        myCommand.CommandText += " and D.year >= " + int.Parse(year_start) + " and D.semester = '" + term + "'";
+                    }
+                    // otherwise find results for all terms
+                    else
+                    {
+                        myCommand.CommandText += " and D.year >= " + int.Parse(year_start);
+                    }
+                }
+                // if there is only an end date
+                else if (year_end.Length > 0)
+                {
+
+                    // Check if a term other than "All" is specified
+                    if (term.Length > 0 && term != "All")
+                    {
+                        myCommand.CommandText += " and D.year <= " + int.Parse(year_end) + " and D.semester = '" + term + "'";
+                    }
+                    // otherwise find results for all terms
+                    else
+                    {
+                        myCommand.CommandText += " and D.year <= " + int.Parse(year_end);
+                    }
+                }
+            }
 
             if (course_search)
             {
@@ -323,6 +393,9 @@ namespace _391warehouse
 
             try
             {
+                // Throw an exception to end execution if end date is less than start date
+                if (invalid_flag != 0) throw new ArgumentException("Invalid date selection!");
+
                 myReader = myCommand.ExecuteReader();
 
                 while (myReader.Read())
@@ -335,6 +408,11 @@ namespace _391warehouse
             {
                 MessageBox.Show(ex.ToString(), "Error");
             }
+
+        }
+
+        private void courseTitle_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
