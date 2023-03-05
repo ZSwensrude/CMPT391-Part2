@@ -50,7 +50,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.instructorDept = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.instructorTitle = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.instructorGender = new System.Windows.Forms.ComboBox();
             this.submit_btn = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.reset_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.instructorTitle = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -333,6 +333,18 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "Name:";
             // 
+            // instructorTitle
+            // 
+            this.instructorTitle.FormattingEnabled = true;
+            this.instructorTitle.Items.AddRange(new object[] {
+            "Assistant Professor",
+            "Full Professor",
+            "Associate Professor"});
+            this.instructorTitle.Location = new System.Drawing.Point(289, 448);
+            this.instructorTitle.Name = "instructorTitle";
+            this.instructorTitle.Size = new System.Drawing.Size(187, 21);
+            this.instructorTitle.TabIndex = 29;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -350,7 +362,7 @@
             this.instructorDept.Items.AddRange(new object[] {
             "Business",
             "Computer Science",
-            "Mathmatics",
+            "Mathematics",
             "Psychology",
             "Statistics"});
             this.instructorDept.Location = new System.Drawing.Point(289, 473);
@@ -368,13 +380,6 @@
             this.label14.Size = new System.Drawing.Size(63, 30);
             this.label14.TabIndex = 20;
             this.label14.Text = "Dept:";
-            // 
-            // instructorTitle
-            // 
-            this.instructorTitle.Location = new System.Drawing.Point(289, 447);
-            this.instructorTitle.Name = "instructorTitle";
-            this.instructorTitle.Size = new System.Drawing.Size(187, 20);
-            this.instructorTitle.TabIndex = 22;
             // 
             // label15
             // 
@@ -457,6 +462,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(614, 681);
             this.tableLayoutPanel1.TabIndex = 28;
+          
             // 
             // Warehouse
             // 
@@ -464,13 +470,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(38)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.instructorTitle);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.reset_button);
             this.Controls.Add(this.import_btn);
             this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.instructorGender);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.instructorTitle);
             this.Controls.Add(this.instructorDept);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -526,7 +532,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox instructorDept;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox instructorTitle;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox instructorGender;
         private System.Windows.Forms.Button submit_btn;
@@ -534,6 +539,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button reset_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ComboBox instructorTitle;
     }
 }
 
