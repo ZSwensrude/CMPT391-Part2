@@ -347,6 +347,12 @@
             // instructorDept
             // 
             this.instructorDept.FormattingEnabled = true;
+            this.instructorDept.Items.AddRange(new object[] {
+            "Business",
+            "Computer Science",
+            "Mathmatics",
+            "Psychology",
+            "Statistics"});
             this.instructorDept.Location = new System.Drawing.Point(289, 473);
             this.instructorDept.Name = "instructorDept";
             this.instructorDept.Size = new System.Drawing.Size(187, 21);
@@ -384,6 +390,9 @@
             // instructorGender
             // 
             this.instructorGender.FormattingEnabled = true;
+            this.instructorGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.instructorGender.Location = new System.Drawing.Point(289, 501);
             this.instructorGender.Name = "instructorGender";
             this.instructorGender.Size = new System.Drawing.Size(187, 21);

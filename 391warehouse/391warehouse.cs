@@ -26,7 +26,7 @@ namespace _391warehouse
         {
             InitializeComponent();
             ///////////////////////////////
-            String connectionString = "Server = DESKTOP-JSPRNKM; Database = 391warehouse; Trusted_Connection = yes;";
+            String connectionString = "Server =LAPTOP-L6HCRV5P Database = 391warehouse; Trusted_Connection = yes;";
             // Need to change server to your personal SQL server before using (and Database if different)
             // Adam: DESKTOP-SO5MCT3
             // Zach: LAPTOP-HUT8634L
