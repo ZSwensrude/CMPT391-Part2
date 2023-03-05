@@ -26,7 +26,7 @@ namespace _391warehouse
         {
             InitializeComponent();
             ///////////////////////////////
-            String connectionString = "Server = LAPTOP-L6HCRV5P; Database = 391warehouse; Trusted_Connection = yes;";
+            String connectionString = "Server = DESKTOP-JSPRNKM; Database = 391warehouse; Trusted_Connection = yes;";
             // Need to change server to your personal SQL server before using (and Database if different)
             // Adam: DESKTOP-SO5MCT3
             // Zach: LAPTOP-HUT8634L
@@ -59,6 +59,7 @@ namespace _391warehouse
 
         private void Warehouse_Load(object sender, EventArgs e)
         {
+            this.AcceptButton = submit_btn;
             UpdateTotalCoursesDisplay();
         }
 
@@ -239,9 +240,9 @@ namespace _391warehouse
 
 
             //ADD DATE SEARCH HERE  "+= Date D"
-            string year_start = yearStart.GetItemText(yearStart.SelectedItem);
-            string year_end = yearEnd.GetItemText(yearEnd.SelectedItem);
-            string term = termCombo.GetItemText(termCombo.SelectedItem);
+            string year_start = yearStart.Text;
+            string year_end = yearEnd.Text;
+            string term = termCombo.Text;
             int invalid_flag = 0;
 
             if (year_start.Length > 0 || year_end.Length > 0 || term.Length > 0)
@@ -252,7 +253,7 @@ namespace _391warehouse
 
             //Course lookup
             string course_title = courseTitle.Text;
-            string selected_dept = courseDept.GetItemText(courseDept.SelectedItem);
+            string selected_dept = courseDept.Text;
             string selected_credits = courseCredits.GetItemText(courseCredits.SelectedItem);
             
             if (course_title.Length > 0 || selected_dept.Length > 0 || selected_credits.Length > 0)
@@ -377,6 +378,11 @@ namespace _391warehouse
                         myCommand.CommandText += " and D.year <= " + int.Parse(year_end);
                     }
                 }
+                // if there is only a term
+                else if (term.Length > 0 && term != "ALL")
+                {
+                    myCommand.CommandText += " and D.semester = '" + term + "'";
+                }
             }
 
             if (course_search)
@@ -431,7 +437,7 @@ namespace _391warehouse
 
                 while (myReader.Read())
                 {
-                    num_display.Text = myReader["total_courses"].ToString();
+                    num_display.Text = myReader["total_courses"] == DBNull.Value ? "0" : myReader["total_courses"].ToString();
                 }
                 myReader.Close();
             }
@@ -442,9 +448,20 @@ namespace _391warehouse
 
         }
 
-        private void courseTitle_TextChanged(object sender, EventArgs e)
+        private void reset_button_Click(object sender, EventArgs e)
         {
-
+            UpdateTotalCoursesDisplay();
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Text = null;
+                }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).Text = null;
+                }
+            }
         }
     }
 }

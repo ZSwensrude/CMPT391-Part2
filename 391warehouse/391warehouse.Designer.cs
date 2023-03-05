@@ -56,6 +56,9 @@
             this.submit_btn = new System.Windows.Forms.Button();
             this.import_btn = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.reset_button = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // yearStart
@@ -95,17 +98,18 @@
             "2020",
             "2021",
             "2022"});
-            this.yearStart.Location = new System.Drawing.Point(344, 156);
+            this.yearStart.Location = new System.Drawing.Point(342, 118);
             this.yearStart.Name = "yearStart";
             this.yearStart.Size = new System.Drawing.Size(94, 21);
             this.yearStart.TabIndex = 0;
             // 
             // num_display
             // 
+            this.num_display.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.num_display.AutoSize = true;
             this.num_display.Font = new System.Drawing.Font("Segoe UI", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.num_display.ForeColor = System.Drawing.Color.White;
-            this.num_display.Location = new System.Drawing.Point(725, 267);
+            this.num_display.Location = new System.Drawing.Point(78, 204);
             this.num_display.Name = "num_display";
             this.num_display.Size = new System.Drawing.Size(457, 212);
             this.num_display.TabIndex = 1;
@@ -114,10 +118,11 @@
             // 
             // total_label
             // 
+            this.total_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.total_label.AutoSize = true;
             this.total_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_label.ForeColor = System.Drawing.Color.White;
-            this.total_label.Location = new System.Drawing.Point(851, 237);
+            this.total_label.Location = new System.Drawing.Point(210, 136);
             this.total_label.Name = "total_label";
             this.total_label.Size = new System.Drawing.Size(193, 30);
             this.total_label.TabIndex = 2;
@@ -128,7 +133,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(218, 106);
+            this.label3.Location = new System.Drawing.Point(216, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 30);
             this.label3.TabIndex = 3;
@@ -139,7 +144,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(212, 250);
+            this.label4.Location = new System.Drawing.Point(210, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 30);
             this.label4.TabIndex = 4;
@@ -150,7 +155,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(212, 407);
+            this.label5.Location = new System.Drawing.Point(210, 369);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 30);
             this.label5.TabIndex = 5;
@@ -161,7 +166,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(218, 147);
+            this.label6.Location = new System.Drawing.Point(216, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 30);
             this.label6.TabIndex = 6;
@@ -172,7 +177,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(460, 147);
+            this.label7.Location = new System.Drawing.Point(458, 109);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 30);
             this.label7.TabIndex = 7;
@@ -215,7 +220,7 @@
             "2020",
             "2021",
             "2022"});
-            this.yearEnd.Location = new System.Drawing.Point(508, 156);
+            this.yearEnd.Location = new System.Drawing.Point(506, 118);
             this.yearEnd.Name = "yearEnd";
             this.yearEnd.Size = new System.Drawing.Size(94, 21);
             this.yearEnd.TabIndex = 8;
@@ -225,7 +230,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(218, 183);
+            this.label8.Location = new System.Drawing.Point(216, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 30);
             this.label8.TabIndex = 9;
@@ -239,7 +244,7 @@
             "Winter",
             "Spring/Summer",
             "All"});
-            this.termCombo.Location = new System.Drawing.Point(344, 193);
+            this.termCombo.Location = new System.Drawing.Point(342, 155);
             this.termCombo.Name = "termCombo";
             this.termCombo.Size = new System.Drawing.Size(94, 21);
             this.termCombo.TabIndex = 10;
@@ -249,7 +254,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(218, 280);
+            this.label9.Location = new System.Drawing.Point(216, 242);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 30);
             this.label9.TabIndex = 11;
@@ -257,18 +262,17 @@
             // 
             // courseTitle
             // 
-            this.courseTitle.Location = new System.Drawing.Point(281, 283);
+            this.courseTitle.Location = new System.Drawing.Point(279, 245);
             this.courseTitle.Name = "courseTitle";
             this.courseTitle.Size = new System.Drawing.Size(187, 20);
             this.courseTitle.TabIndex = 12;
-            this.courseTitle.TextChanged += new System.EventHandler(this.courseTitle_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(218, 310);
+            this.label10.Location = new System.Drawing.Point(216, 272);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 30);
             this.label10.TabIndex = 13;
@@ -280,10 +284,10 @@
             this.courseDept.Items.AddRange(new object[] {
             "Business",
             "Computer Science",
-            "Mathmatics",
+            "Mathematics",
             "Psychology",
             "Statistics"});
-            this.courseDept.Location = new System.Drawing.Point(281, 319);
+            this.courseDept.Location = new System.Drawing.Point(279, 281);
             this.courseDept.Name = "courseDept";
             this.courseDept.Size = new System.Drawing.Size(187, 21);
             this.courseDept.TabIndex = 14;
@@ -295,7 +299,7 @@
             "2",
             "3",
             "4"});
-            this.courseCredits.Location = new System.Drawing.Point(415, 355);
+            this.courseCredits.Location = new System.Drawing.Point(413, 317);
             this.courseCredits.Name = "courseCredits";
             this.courseCredits.Size = new System.Drawing.Size(53, 21);
             this.courseCredits.TabIndex = 15;
@@ -305,7 +309,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(218, 346);
+            this.label11.Location = new System.Drawing.Point(216, 308);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(146, 30);
             this.label11.TabIndex = 16;
@@ -313,7 +317,7 @@
             // 
             // instructorName
             // 
-            this.instructorName.Location = new System.Drawing.Point(291, 459);
+            this.instructorName.Location = new System.Drawing.Point(289, 421);
             this.instructorName.Name = "instructorName";
             this.instructorName.Size = new System.Drawing.Size(187, 20);
             this.instructorName.TabIndex = 17;
@@ -323,7 +327,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(212, 449);
+            this.label12.Location = new System.Drawing.Point(210, 411);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 30);
             this.label12.TabIndex = 18;
@@ -334,7 +338,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(212, 479);
+            this.label13.Location = new System.Drawing.Point(210, 441);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(57, 30);
             this.label13.TabIndex = 19;
@@ -343,13 +347,7 @@
             // instructorDept
             // 
             this.instructorDept.FormattingEnabled = true;
-            this.instructorDept.Items.AddRange(new object[] {
-            "Business",
-            "Computer Science",
-            "Mathmatics",
-            "Psychology",
-            "Statistics"});
-            this.instructorDept.Location = new System.Drawing.Point(291, 511);
+            this.instructorDept.Location = new System.Drawing.Point(289, 473);
             this.instructorDept.Name = "instructorDept";
             this.instructorDept.Size = new System.Drawing.Size(187, 21);
             this.instructorDept.TabIndex = 21;
@@ -359,7 +357,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(212, 509);
+            this.label14.Location = new System.Drawing.Point(210, 471);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 30);
             this.label14.TabIndex = 20;
@@ -367,7 +365,7 @@
             // 
             // instructorTitle
             // 
-            this.instructorTitle.Location = new System.Drawing.Point(291, 485);
+            this.instructorTitle.Location = new System.Drawing.Point(289, 447);
             this.instructorTitle.Name = "instructorTitle";
             this.instructorTitle.Size = new System.Drawing.Size(187, 20);
             this.instructorTitle.TabIndex = 22;
@@ -377,7 +375,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(212, 539);
+            this.label15.Location = new System.Drawing.Point(210, 501);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 30);
             this.label15.TabIndex = 23;
@@ -386,10 +384,7 @@
             // instructorGender
             // 
             this.instructorGender.FormattingEnabled = true;
-            this.instructorGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.instructorGender.Location = new System.Drawing.Point(291, 539);
+            this.instructorGender.Location = new System.Drawing.Point(289, 501);
             this.instructorGender.Name = "instructorGender";
             this.instructorGender.Size = new System.Drawing.Size(187, 21);
             this.instructorGender.TabIndex = 24;
@@ -398,9 +393,9 @@
             // 
             this.submit_btn.AutoEllipsis = true;
             this.submit_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(116)))), ((int)(((byte)(179)))));
-            this.submit_btn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit_btn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.submit_btn.Location = new System.Drawing.Point(217, 592);
+            this.submit_btn.Location = new System.Drawing.Point(373, 554);
             this.submit_btn.Name = "submit_btn";
             this.submit_btn.Size = new System.Drawing.Size(136, 49);
             this.submit_btn.TabIndex = 25;
@@ -424,12 +419,44 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
+            // reset_button
+            // 
+            this.reset_button.AutoEllipsis = true;
+            this.reset_button.BackColor = System.Drawing.Color.White;
+            this.reset_button.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(116)))), ((int)(((byte)(179)))));
+            this.reset_button.Location = new System.Drawing.Point(215, 554);
+            this.reset_button.Name = "reset_button";
+            this.reset_button.Size = new System.Drawing.Size(136, 49);
+            this.reset_button.TabIndex = 27;
+            this.reset_button.Text = "Reset";
+            this.reset_button.UseVisualStyleBackColor = false;
+            this.reset_button.Click += new System.EventHandler(this.reset_button_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.num_display, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.total_label, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(650, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(614, 681);
+            this.tableLayoutPanel1.TabIndex = 28;
+            // 
             // Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(38)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.reset_button);
             this.Controls.Add(this.import_btn);
             this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.instructorGender);
@@ -454,13 +481,13 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.total_label);
-            this.Controls.Add(this.num_display);
             this.Controls.Add(this.yearStart);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Warehouse";
             this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.Warehouse_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,6 +523,8 @@
         private System.Windows.Forms.Button submit_btn;
         private System.Windows.Forms.Button import_btn;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button reset_button;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
