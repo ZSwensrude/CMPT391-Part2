@@ -26,7 +26,7 @@ namespace _391warehouse
         {
             InitializeComponent();
             ///////////////////////////////
-            String connectionString = "Server = DESKTOP-SO5MCT3; Database = 391warehouse; Trusted_Connection = yes;";
+            String connectionString = "Server = LAPTOP-L6HCRV5P; Database = 391warehouse; Trusted_Connection = yes;";
             // Need to change server to your personal SQL server before using (and Database if different)
             // Adam: DESKTOP-SO5MCT3
             // Zach: LAPTOP-HUT8634L
@@ -264,6 +264,17 @@ namespace _391warehouse
 
 
             //ADD INSTRUCTOR HERE "+= Instructor I"
+            //instuctor lookup
+            string instr_Name = instructorName.Text;
+            string instr_Title = instructorTitle.Text;
+            string instr_Dept = instructorDept.GetItemText(instructorDept.SelectedItem);
+            string intr_Gender = instructorGender.GetItemText(instructorGender.SelectedItem);
+
+            if (instr_Name.Length > 0 || instr_Title.Length > 0 || instr_Dept.Length > 0 || intr_Gender.Length > 0)
+            { 
+                myCommand.CommandText += ", Instructor I";
+                instructor_search = true;
+            }
 
 
 
@@ -385,7 +396,27 @@ namespace _391warehouse
             }
 
             //if (instructor_search)
-            //do thing
+            //do thing 
+
+            if (instructor_search)
+            {
+                if (instr_Name.Length > 0)
+                {
+                    myCommand.CommandText += " and I.name = '" + instr_Name + "'";
+                }
+                if (instr_Title.Length > 0)
+                {
+                    myCommand.CommandText += " and I.title = '" + instr_Title + "'";
+                }
+                if (instr_Dept.Length > 0)
+                {
+                    myCommand.CommandText += " and I.dept = '" + instr_Dept + "'";
+                }
+                if (intr_Gender.Length > 0)
+                {
+                    myCommand.CommandText += " and I.gender = '" + intr_Gender + "'";
+                }
+            }
 
 
 
