@@ -26,7 +26,7 @@ namespace _391warehouse
         {
             InitializeComponent();
             ///////////////////////////////
-            String connectionString = "Server =LAPTOP-L6HCRV5P Database = 391warehouse; Trusted_Connection = yes;";
+            String connectionString = "Server =LAPTOP-L6HCRV5P; Database = 391warehouse; Trusted_Connection = yes;";
             // Need to change server to your personal SQL server before using (and Database if different)
             // Adam: DESKTOP-SO5MCT3
             // Zach: LAPTOP-HUT8634L
@@ -267,7 +267,7 @@ namespace _391warehouse
             //ADD INSTRUCTOR HERE "+= Instructor I"
             //instuctor lookup
             string instr_Name = instructorName.Text;
-            string instr_Title = instructorTitle.Text;
+            string instr_Title = instructorTitle.GetItemText(instructorTitle.SelectedItem); ;
             string instr_Dept = instructorDept.GetItemText(instructorDept.SelectedItem);
             string intr_Gender = instructorGender.GetItemText(instructorGender.SelectedItem);
 
