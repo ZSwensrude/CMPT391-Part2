@@ -109,7 +109,7 @@
             this.num_display.AutoSize = true;
             this.num_display.Font = new System.Drawing.Font("Segoe UI", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.num_display.ForeColor = System.Drawing.Color.White;
-            this.num_display.Location = new System.Drawing.Point(78, 204);
+            this.num_display.Location = new System.Drawing.Point(49, 204);
             this.num_display.Name = "num_display";
             this.num_display.Size = new System.Drawing.Size(457, 212);
             this.num_display.TabIndex = 1;
@@ -122,7 +122,7 @@
             this.total_label.AutoSize = true;
             this.total_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_label.ForeColor = System.Drawing.Color.White;
-            this.total_label.Location = new System.Drawing.Point(210, 136);
+            this.total_label.Location = new System.Drawing.Point(181, 136);
             this.total_label.Name = "total_label";
             this.total_label.Size = new System.Drawing.Size(193, 30);
             this.total_label.TabIndex = 2;
@@ -333,18 +333,6 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "Name:";
             // 
-            // instructorTitle
-            // 
-            this.instructorTitle.FormattingEnabled = true;
-            this.instructorTitle.Items.AddRange(new object[] {
-            "Assistant Professor",
-            "Full Professor",
-            "Associate Professor"});
-            this.instructorTitle.Location = new System.Drawing.Point(289, 448);
-            this.instructorTitle.Name = "instructorTitle";
-            this.instructorTitle.Size = new System.Drawing.Size(187, 21);
-            this.instructorTitle.TabIndex = 29;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -419,10 +407,11 @@
             // 
             // import_btn
             // 
+            this.import_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.import_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.import_btn.ForeColor = System.Drawing.Color.White;
             this.import_btn.Image = global::_391warehouse.Properties.Resources.upload;
-            this.import_btn.Location = new System.Drawing.Point(1202, 12);
+            this.import_btn.Location = new System.Drawing.Point(503, 3);
             this.import_btn.Name = "import_btn";
             this.import_btn.Size = new System.Drawing.Size(50, 47);
             this.import_btn.TabIndex = 26;
@@ -453,16 +442,28 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.num_display, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.total_label, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.import_btn, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(650, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(708, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(614, 681);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(556, 681);
             this.tableLayoutPanel1.TabIndex = 28;
-          
+            // 
+            // instructorTitle
+            // 
+            this.instructorTitle.FormattingEnabled = true;
+            this.instructorTitle.Items.AddRange(new object[] {
+            "Assistant Professor",
+            "Full Professor",
+            "Associate Professor"});
+            this.instructorTitle.Location = new System.Drawing.Point(289, 448);
+            this.instructorTitle.Name = "instructorTitle";
+            this.instructorTitle.Size = new System.Drawing.Size(187, 21);
+            this.instructorTitle.TabIndex = 29;
             // 
             // Warehouse
             // 
@@ -473,7 +474,6 @@
             this.Controls.Add(this.instructorTitle);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.reset_button);
-            this.Controls.Add(this.import_btn);
             this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.instructorGender);
             this.Controls.Add(this.label15);
